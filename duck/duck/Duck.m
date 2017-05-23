@@ -22,4 +22,5 @@
 {
     [quackBehavior quack];
 }
+
 @end

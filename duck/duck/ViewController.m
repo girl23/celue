@@ -21,11 +21,13 @@
     //3.多用组合，少用继承；
     
     [super viewDidLoad];
-    FlyBehavior * fly=[FlyWithWings new];
-    QuackBehavior * quack=[Quack new];
+
     Duck *duck1=[Duck new];
-    [duck1 performFly:fly];
-    [duck1 performQuack:quack];
+    duck1.flybehave=[FlyWithWings new];
+    duck1.quackBehave=[Quack new];
+    [duck1 performFly:duck1.flybehave];
+    [duck1 performQuack:duck1.quackBehave];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
